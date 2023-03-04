@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.fragment_screens.details_product_screens.InfoProductFragment"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:paddingTop="@dimen/_12sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Id"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:id="@+id/textId"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text price"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:id="@+id/textPrice"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text discount"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:id="@+id/textDiscount"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text sum"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:id="@+id/textSum"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text purchasese"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:id="@+id/textPurchases"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.fragment_screens.details_product_screens.IntroduceProductFragment"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_12sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text purchasese"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:id="@+id/textIntroProduct"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:textColor="@color/white"/>
+    
+    
+</LinearLayout>

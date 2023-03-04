@@ -46,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
     private void _setOnclick() {
         btnLogin.setOnClickListener(view -> _login());
         textRegister.setOnClickListener(view -> _register());
+        textForgot.setOnClickListener(view -> _forgotPass());
     }
 
     private void _login() {
@@ -88,5 +89,29 @@ public class LoginActivity extends AppCompatActivity {
     private void _register() {
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(intent);
+    }
+
+    private void _forgotPass() {
+        String email = inputEmail.getText().toString().trim();
+        boolean isNull = Validate.isNull(email);
+        boolean isEmail = Validate.isEmail(email);
+        boolean isBreaking = Validate.isBreakingUpdateProfile(LoginActivity.this, isNull, isEmail);
+        if (isBreaking) return;
+
+        _handleSendEmailResetPass(email);
+    }
+
+    private void _handleSendEmailResetPass(String email) {
+        progressDialog.show();
+        Auth.sendEmailResetPass(email);
+        new Handler()
+                .postDelayed(() -> {
+                    progressDialog.cancel();
+                    if (Auth.isResult()) {
+                        ShowDialog.handleShowDialog(LoginActivity.this, Const.flagSuccessDialog, "Đường dẫn đã được gửi đến email của bạn!");
+                    } else {
+                        ShowDialog.handleShowDialog(LoginActivity.this, Const.flagSuccessDialog, "Gửi email thất bại!");
+                    }
+                }, 3000);
     }
 }

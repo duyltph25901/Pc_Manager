@@ -118,4 +118,12 @@ public class Auth {
                 .signOut(activity)
                 .addOnCompleteListener(task -> setResult(task.isSuccessful()));
     }
+
+    public static void sendEmailResetPass(String emailAddress) {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+
+        auth.sendPasswordResetEmail(emailAddress)
+                .addOnCompleteListener(task -> setResult(task.isSuccessful()));
+
+    }
 }

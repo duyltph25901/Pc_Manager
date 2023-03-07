@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             DataLocalManagement.setFirstInstall(true);
             _navigationScreen(OnBoardingActivity.class);
         } else {
-            DataLocalManagement.setFirstInstall(false);
             if (user == null) {
                 _navigationScreen(LoginActivity.class);
             } else {

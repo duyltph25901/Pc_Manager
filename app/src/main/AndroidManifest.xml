@@ -14,6 +14,9 @@
         android:theme="@style/FullScreen"
         tools:targetApi="31">
         <activity
+            android:name=".screens.activity_screens.UpdatePasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".screens.activity_screens.EditPasswordActivity"
             android:exported="false" />
         <activity
